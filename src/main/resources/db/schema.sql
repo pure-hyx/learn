@@ -16,3 +16,12 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+
+DROP TABLE IF EXISTS `pure`;
+CREATE TABLE `pure`(
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `destination`  varchar(50) DEFAULT NULL comment '目的地',
+  `spots` varchar(500) DEFAULT NULL comment '景点',
+  `duration` varchar(50) DEFAULT NULL comment '时长',
+  PRIMARY KEY (`id`)
+);
