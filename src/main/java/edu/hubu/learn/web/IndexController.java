@@ -40,21 +40,5 @@ public class IndexController {
         return mav;
     }
 
-    @RequestMapping("/pure")
-    public ModelAndView pure() {
-        ModelAndView mav = new ModelAndView();
-        Pure pure = pureService.getPure(1l);
-        mav.addObject("pure", pure);
-        mav.setViewName("pure");
-        return mav;
-    }
-
-    @RequestMapping("/pure/{id}")
-    public ModelAndView getPure(@PathVariable Long id) {
-        ModelAndView mav = new ModelAndView();
-        Pure pure = pureService.getPure(id);
-        mav.addObject("pure", pure);
-        mav.setViewName("pure");
-        return mav;
-    }
+   
 }
